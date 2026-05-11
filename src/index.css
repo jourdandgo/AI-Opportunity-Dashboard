@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-bento-bg: rgba(15, 23, 42, 0.6);
+  --color-bento-border: rgba(51, 65, 85, 0.5);
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-300 bg-[#020617];
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-[rgba(15,23,42,0.6)] border border-[rgba(51,65,85,0.5)] rounded-2xl overflow-hidden backdrop-blur-sm;
+  }
+  
+  .status-pursue { @apply bg-[rgba(16,185,129,0.1)] text-[#10b981] border border-[rgba(16,185,129,0.2)]; }
+  .status-pilot { @apply bg-[rgba(59,130,246,0.1)] text-[#3b82f6] border border-[rgba(59,130,246,0.2)]; }
+  .status-refine { @apply bg-[rgba(245,158,11,0.1)] text-[#f59e0b] border border-[rgba(245,158,11,0.2)]; }
+  .status-park { @apply bg-[rgba(100,116,139,0.1)] text-[#94a3b8] border border-[rgba(100,116,139,0.2)]; }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
